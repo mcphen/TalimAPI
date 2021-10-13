@@ -15,6 +15,7 @@ class UniversityRessource extends JsonResource
     public function toArray($request)
     {
         return [
+            'id'=>$this->id,
             'titre'=>$this->titre,
             'slug'=>$this->slug,
             'description'=>$this->description,

@@ -10,7 +10,7 @@ use Spatie\Sluggable\SlugOptions;
 class Pays extends Model
 {
     use HasFactory;use HasSlug;
-    protected $fillable =['pays'];
+    protected $fillable =['libelle_pays'];
 
     public function getSlugOptions() : SlugOptions
     {
@@ -20,13 +20,5 @@ class Pays extends Model
             ->allowDuplicateSlugs();
     }
 
-    /**
-     * Get the route key for the model.
-     *
-     * @return string
-     */
-    public function getRouteKeyName()
-    {
-        return 'slug';
-    }
+
 }

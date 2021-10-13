@@ -16,11 +16,12 @@ class AuthController extends BaseController
             $authUser = Auth::user();
             $success['token'] =  $authUser->createToken('MyAuthApp')->plainTextToken;
             $success['name'] =  $authUser->name;
+            $success['role_id'] =  $authUser->role_id;
 
             return $this->sendResponse($success, 'User signed in');
         }
         else{
-            return $this->sendError('Unauthorised.', ['error'=>'Unauthorised']);
+            return $this->sendError('Incorrect.', ['error'=>'Incorrect']);
         }
     }
 

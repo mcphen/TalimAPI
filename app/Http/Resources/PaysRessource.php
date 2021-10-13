@@ -15,7 +15,8 @@ class PaysRessource extends JsonResource
     public function toArray($request)
     {
         return [
-            'pays'=>$this->pays,
+            'id'=>$this->id,
+            'libelle_pays'=>$this->libelle_pays,
             'created_at' => $this->created_at->format('m/d/Y'),
             'updated_at' => $this->updated_at->format('m/d/Y'),
         ];

@@ -24,13 +24,5 @@ class Ville extends Model
         return $this->belongsTo(Pays::class);
     }
 
-    /**
-     * Get the route key for the model.
-     *
-     * @return string
-     */
-    public function getRouteKeyName()
-    {
-        return 'slug';
-    }
+
 }

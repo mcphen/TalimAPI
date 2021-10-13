@@ -21,7 +21,7 @@ class PaysController extends BaseController
     {
         $input = $request->all();
         $validator = Validator::make($input, [
-            'pays' => 'required',
+            'libelle_pays' => 'required',
             //  'description' => 'required'
         ]);
         if($validator->fails()){
@@ -42,29 +42,32 @@ class PaysController extends BaseController
     }
 
 
-    public function update(Request $request, Pays $Pays)
+    public function update(Request $request,  $id)
     {
         $input = $request->all();
 
         $validator = Validator::make($input, [
-            'pays' => 'required',
+            'libelle_pays' => 'required',
             //'description' => 'required'
         ]);
 
         if($validator->fails()){
             return $this->sendError($validator->errors());
         }
-
-        $Pays->pays = $input['pays'];
+        $pays = Pays::find($id);
+        $pays->libelle_pays = $input['libelle_pays'];
         //  $blog->description = $input['description'];
-        $Pays->save();
+        $pays->save();
 
-        return $this->sendResponse(new PaysRessource($Pays), 'Pays updated.');
+        return $this->sendResponse(new PaysRessource($pays), 'Pays updated.');
     }
 
-    public function destroy(Pays $Pays)
+    public function destroy($id)
     {
-        $Pays->delete();
+        $pays = Pays::find($id);
+        //dd($pays);
+
+        $pays->delete();
         return $this->sendResponse([], 'Pays deleted.');
     }
 }

@@ -15,6 +15,7 @@ class NiveauRessource extends JsonResource
     public function toArray($request)
     {
         return [
+            'id'=>$this->id,
             'niveau'=>$this->niveau,
             'created_at' => $this->created_at->format('m/d/Y'),
             'updated_at' => $this->updated_at->format('m/d/Y'),
