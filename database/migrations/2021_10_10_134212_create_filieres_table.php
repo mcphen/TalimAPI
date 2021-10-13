@@ -17,9 +17,9 @@ class CreateFilieresTable extends Migration
             $table->id();
             $table->string('filiere');
             $table->string('slug');
-            $table->foreignId('ecole_id')
+          /*  $table->foreignId('ecole_id')
                 ->constrained('ecoles')
-                ->onDelete('cascade');
+                ->onDelete('cascade');*/
             $table->timestamps();
         });
     }

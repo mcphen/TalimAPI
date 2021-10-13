@@ -7,16 +7,28 @@ use Illuminate\Database\Eloquent\Model;
 use Spatie\Sluggable\HasSlug;
 use Spatie\Sluggable\SlugOptions;
 
-class Cycle extends Model
+class University extends Model
 {
     use HasFactory;use HasSlug;
-    protected $fillable = ['cycle'];
+    protected $fillable = ['titre','slug','description','vignette','adresse','ecole_id','ville_id','pays_id'];
+
+    public function agence(){
+        return $this->belongsTo(Ecole::class);
+    }
+
+    public function ville(){
+        return $this->belongsTo(Ville::class);
+    }
+
+    public function pays(){
+        return $this->belongsTo(Pays::class);
+    }
 
 
     public function getSlugOptions() : SlugOptions
     {
         return SlugOptions::create()
-            ->generateSlugsFrom('cycle')
+            ->generateSlugsFrom('name')
             ->saveSlugsTo('slug')
             ->allowDuplicateSlugs();
     }
