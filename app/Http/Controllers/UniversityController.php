@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\API\BaseController;
 use App\Models\University;
 use Illuminate\Http\Request;
 
-class UniversityController extends Controller
+class UniversityController extends BaseController
 {
     /**
      * Display a listing of the resource.

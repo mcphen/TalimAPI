@@ -23,6 +23,8 @@ class UniversityRessource extends JsonResource
             'adresse'=>$this->adresse,
             'agence'=>$this->agence,
             'ville'=>$this->ville,
+            'pays_id'=>$this->pays_id,
+            'ville_id'=>$this->ville_id,
             'pays'=>$this->pays,
 
 

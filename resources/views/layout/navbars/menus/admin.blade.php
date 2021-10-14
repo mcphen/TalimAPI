@@ -6,7 +6,7 @@
 
             <ul class="navbar-nav flex-column">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#" >
+                    <a class="nav-link" href="{{route('admin.dashboard')}}" >
                         <span class="feather-icon"><i data-feather="activity"></i></span>
                         <span class="nav-link-text">Tableau de bord</span>
                     </a>
@@ -20,7 +20,7 @@
             </div>
             <ul class="navbar-nav flex-column">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="{{route('admin.agences')}}">
                         <span class="feather-icon"><i data-feather="settings"></i></span>
                         <span class="nav-link-text">Gestions des agences</span>
                     </a>

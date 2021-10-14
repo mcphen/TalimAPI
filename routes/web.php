@@ -25,4 +25,11 @@ Route::middleware('auth:sanctum')->group( function () {
     Route::get('/admin/villes',[\App\Http\Controllers\AdminController::class,'villes'])->name("admin.villes");
     Route::get('/admin/roles',[\App\Http\Controllers\AdminController::class,'roles'])->name("admin.roles");
     Route::get('/admin/niveaux',[\App\Http\Controllers\AdminController::class,'niveaux'])->name("admin.niveaux");
+    Route::get('/admin/niveaux',[\App\Http\Controllers\AdminController::class,'niveaux'])->name("admin.niveaux");
+
+
+    Route::get('/agence/dashboard',[\App\Http\Controllers\AgenceController::class,'dashboard'])->name("agence.dashboard");
+    Route::get('/agence/universities',[\App\Http\Controllers\AgenceController::class,'universities'])->name("agence.universities");
+    Route::get('/agence/formations',[\App\Http\Controllers\AgenceController::class,'formations'])->name("agence.formations");
+    Route::get('/agence/candidats',[\App\Http\Controllers\AgenceController::class,'candidats'])->name("agence.candidats");
 });

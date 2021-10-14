@@ -62,6 +62,8 @@ Vue.component('niveau', require('./components/Admin/Parametre/Niveau').default);
 Vue.component('cycles', require('./components/Admin/Parametre/Cycles').default);
 Vue.component('pays', require('./components/Admin/Parametre/Pays').default);
 Vue.component('villes', require('./components/Admin/Parametre/Villes').default);
+Vue.component('admin-agence', require('./components/Admin/Agence/Agence').default);
+Vue.component('university', require('./components/Agence/University').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

@@ -22,7 +22,7 @@ class AgenceRessource extends JsonResource
             'ville'=>$this->ville,
             'pays'=>$this->pays,
             'tel'=>$this->tel,
-            'user'=> $this->user,
+            'agent'=> $this->user,
             'created_at' => $this->created_at->format('m/d/Y'),
             'updated_at' => $this->updated_at->format('m/d/Y'),
         ];

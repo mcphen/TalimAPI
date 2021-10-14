@@ -17,6 +17,7 @@ class PaysRessource extends JsonResource
         return [
             'id'=>$this->id,
             'libelle_pays'=>$this->libelle_pays,
+            'villes'=>$this->villes,
             'created_at' => $this->created_at->format('m/d/Y'),
             'updated_at' => $this->updated_at->format('m/d/Y'),
         ];

@@ -33,5 +33,9 @@ class University extends Model
             ->allowDuplicateSlugs();
     }
 
+    public function getVignetteAttribute($photo){
+        return asset('/agences/university/vignettes/'.$photo);
+    }
+
 
 }

@@ -25,7 +25,7 @@ class AgenceController extends BaseController
             'name_agence' => 'required',
             'name' => 'required',
             'firstname' => 'required',
-            'email' => 'required|email',
+            'email' => ['required','email', 'unique:users'],
             'password' => 'required',
          //   'role_id'=> 'required',
             //'actived_at'=> 'required',
@@ -36,7 +36,7 @@ class AgenceController extends BaseController
         }
         $user = User::create([
             'name'=>$request->name,
-            'firstname'=>$request->name,
+            'firstname'=>$request->firstname,
             'role_id'=>2,
             'actived_at'=>1,
             'email'=>$request->email,
@@ -77,7 +77,7 @@ class AgenceController extends BaseController
             return $this->sendError($validator->errors());
         }
 
-        $role->name_agence = $input['name_agence'];
+        $role->name = $input['name_agence'];
         //  $blog->description = $input['description'];
         $role->save();
 

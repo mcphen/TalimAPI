@@ -20,5 +20,9 @@ class Pays extends Model
             ->allowDuplicateSlugs();
     }
 
+    public function villes(){
+        return $this->hasMany(Ville::class);
+    }
+
 
 }
