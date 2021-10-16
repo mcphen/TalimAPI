@@ -13,7 +13,15 @@
     </div>
 
     <div class="form-group">
-        <a class="btn btn-primary btn-block fs-16" @click="login" >Connexion</a>
+
+        <a class="btn btn-primary btn-block fs-16" @click="login" >
+            <div class="spinner-border" role="status" v-if="is_sniper">
+                <span class="sr-only">Loading...</span>
+
+            </div>
+            <span>Connexion</span>
+
+        </a>
     </div>
     <br>
 </div>
@@ -28,6 +36,7 @@ export default {
             password:'',
             loading: true,
             is_view : false,
+            is_sniper : false,
             message:""
         }
     },
@@ -35,6 +44,7 @@ export default {
     methods:{
         login(){
             if(this.email!="" && this.password!=""){
+                this.is_sniper = true;
                 axios.post('/api/login',{
                     email : this.email,
                     password : this.password
@@ -51,6 +61,7 @@ export default {
                     this.errored = true
                     if(error.response.status === 404){
                         this.is_view = true;
+                        this.is_sniper = false;
                         this.message = "email ou mot de passe incorrect";
                         console.log("email ou mot de passe incorrect")
 

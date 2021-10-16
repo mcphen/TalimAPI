@@ -117,7 +117,7 @@
                         </div>
 
                         <div class="">
-                            <label>Overview</label>
+                            <label>Description</label>
                             <vue-editor v-model="form.description" />
                         </div>
 

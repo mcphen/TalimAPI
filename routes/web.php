@@ -13,9 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/login',[\App\Http\Controllers\HomeController::class,'login'])->name("login");
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [\App\Http\Controllers\HomeController::class,'home'])->name('home');
+Route::get('/news', [\App\Http\Controllers\HomeController::class,'news'])->name('front.news');
+Route::get('/contact', [\App\Http\Controllers\HomeController::class,'contacts'])->name('front.contacts');
+Route::get('/formations', [\App\Http\Controllers\HomeController::class,'formations'])->name('front.formations');
+Route::get('/agencies', [\App\Http\Controllers\HomeController::class,'agences'])->name('front.agences');
+
 Route::middleware('auth:sanctum')->group( function () {
     Route::get('/admin/dashboard',[\App\Http\Controllers\AdminController::class,'dashboard'])->name("admin.dashboard");
     Route::get('/admin/agences',[\App\Http\Controllers\AdminController::class,'agences'])->name("admin.agences");

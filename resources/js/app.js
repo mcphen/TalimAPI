@@ -41,6 +41,12 @@ import vSelect from 'vue-select'
 Vue.component('v-select', vSelect)
 import 'vue-select/dist/vue-select.css';
 
+import VueSlickCarousel from 'vue-slick-carousel'
+import 'vue-slick-carousel/dist/vue-slick-carousel.css'
+// optional style for arrows & dots
+import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
+Vue.component('VueSlickCarousel',VueSlickCarousel)
+
 
 /**
  * The following block of code may be used to automatically register your
@@ -64,6 +70,9 @@ Vue.component('pays', require('./components/Admin/Parametre/Pays').default);
 Vue.component('villes', require('./components/Admin/Parametre/Villes').default);
 Vue.component('admin-agence', require('./components/Admin/Agence/Agence').default);
 Vue.component('university', require('./components/Agence/University').default);
+Vue.component('formations', require('./components/Agence/Formations').default);
+Vue.component('search', require('./components/Front/Search/Search').default);
+Vue.component('front-formation', require('./components/Front/Formation/Formation').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

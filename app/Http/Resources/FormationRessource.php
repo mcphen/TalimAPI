@@ -23,6 +23,12 @@ class FormationRessource extends JsonResource
             'price'=>$this->price,
             'agence'=>$this->agence,
             'university'=>$this->university,
+            'filiere'=>$this->filiere,
+            'cycle'=>$this->cycle,
+            'file_pdf'=>$this->file_pdf,
+            'filiere_id'=>$this->filiere_id,
+            'cycle_id'=>$this->cycle_id,
+            'university_id'=>$this->university_id,
             'actived_at'=>$this->actived_at,
 
 

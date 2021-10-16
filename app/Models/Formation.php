@@ -10,7 +10,7 @@ use Spatie\Sluggable\SlugOptions;
 class Formation extends Model
 {
     use HasFactory;use HasSlug;
-    protected $fillable = ['titre','slug','description','vignette','price','university_id','actived_at','ecole_id'];
+    protected $fillable = ['titre','slug','description','vignette','price','university_id','actived_at','ecole_id','filiere_id','cycle_id','file_pdf'];
 
     public function agence(){
         return $this->belongsTo(Ecole::class);
@@ -18,6 +18,14 @@ class Formation extends Model
 
     public function university(){
         return $this->belongsTo(University::class);
+    }
+
+    public function filiere(){
+        return $this->belongsTo(Filiere::class);
+    }
+
+    public function cycle(){
+        return $this->belongsTo(Cycle::class);
     }
 
 

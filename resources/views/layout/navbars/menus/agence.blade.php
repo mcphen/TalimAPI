@@ -28,7 +28,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="{{route('agence.formations')}}">
                         <span class="feather-icon"><i data-feather="settings"></i></span>
                         <span class="nav-link-text">Gestions des Programmes</span>
                     </a>
