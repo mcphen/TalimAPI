@@ -53,4 +53,10 @@ class AdminController extends Controller
             'title'=>"Gestions niveaux"
         ]);
     }
+
+    public function services(){
+        return view('admin.parametre.services')->with([
+            'title'=>"Gestions services"
+        ]);
+    }
 }

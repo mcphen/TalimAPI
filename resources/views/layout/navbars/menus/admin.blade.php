@@ -67,6 +67,10 @@
                                 </li>
 
                                 <li class="nav-item">
+                                    <a class="nav-link" href="{{route('admin.services')}}">Services</a>
+                                </li>
+
+                                <li class="nav-item">
                                     <a class="nav-link" href="{{route('admin.roles')}}">Role</a>
                                 </li>
                             </ul>

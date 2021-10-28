@@ -12,6 +12,12 @@ class HomeController extends Controller
         ]);
     }
 
+    public function register(){
+        return view('auth.register')->with([
+            'title'=>"Inscription"
+        ]);
+    }
+
     public function home(){
         return view('front.home')->with([
             'title'=>"Connexion"
@@ -36,8 +42,30 @@ class HomeController extends Controller
         ]);
     }
 
+    public function formations_detail($slug){
+        return view('front.formation_detail')->with([
+            'title'=>"Connexion"
+        ]);
+    }
+    public function news_detail($slug){
+        return view('front.news_detail')->with([
+            'title'=>"Connexion"
+        ]);
+    }
+
     public function contacts(){
         return view('front.contacts')->with([
+            'title'=>"Connexion"
+        ]);
+    }
+
+    public function bibliotheque(){
+        return view('front.bibliotheque')->with([
+            'title'=>"Connexion"
+        ]);
+    }
+    public function talimeur(){
+        return view('front.talimeur')->with([
             'title'=>"Connexion"
         ]);
     }

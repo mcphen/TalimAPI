@@ -93,9 +93,11 @@
     <!-- Vertical Nav -->
     @if(auth()->user()->role_id==1)
         @include('layout.navbars.menus.admin')
-    @else
+    @elseif(auth()->user()->role_id==2)
 
         @include('layout.navbars.menus.agence')
+    @else
+        @include('layout.navbars.menus.candidat')
     @endif
 
     <div id="hk_nav_backdrop" class="hk-nav-backdrop"></div>

@@ -1,50 +1,6 @@
 @extends('layout.frontend')
 @section('header')
-    <!--Section-->
-    <div>
-        <div class="sptb-1">
-            <div class="header-text1 mb-0">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-9 col-lg-12 col-md-12 d-block mx-auto">
-                            <div class="text-center text-white text-property">
-                                <h1 class=""><span class="font-weight-bold">2000+</span> Best  Courses Available Here!</h1>
-                            </div>
-                            <div class="search-background bg-transparent">
-                                <div class="form row g-0 ">
-                                    <div class="form-group  col-xl-4 col-lg-3 col-md-12 mb-0 bg-white">
-                                        <input type="text" class="form-control input-xl br-te-md-0 br-be-md-0" id="text4" placeholder="Search Courses.....">
-                                    </div>
-                                    <div class="form-group  col-xl-3 col-lg-3 col-md-12 mb-0 bg-white">
-                                        <input type="text" class="form-control input-xl br-md-0" id="text5" placeholder="Enter Location">
-                                        <span><i class="fa fa-map-marker location-gps me-1"></i> </span>
-                                    </div>
-                                    <div class="form-group col-xl-3 col-lg-3 col-md-12 select2-lg mb-0 bg-white">
-                                        <select class="form-control select2-show-search  border-bottom-0" data-placeholder="Select Category">
-                                            <optgroup label="Categories">
-                                                <option>Select</option>
-                                                <option value="1">IT</option>
-                                                <option value="2">Language</option>
-                                                <option value="3">Science</option>
-                                                <option value="4">Health</option>
-                                                <option value="5">Humanities</option>
-                                                <option value="6">Business</option>
-                                                <option value="7">Maths</option>
-                                                <option value="8">Marketing</option>
-                                            </optgroup>
-                                        </select>
-                                    </div>
-                                    <div class="col-xl-2 col-lg-3 col-md-12 mb-0">
-                                        <a href="javascript:void(0)" class="btn btn-xl btn-block btn-secondary br-ts-md-0 br-bs-md-0">Search Here</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div><!-- /header-text -->
-        </div>
-    </div><!--/Section-->
+   @include('layout.headers.header_search')
 @endsection
 @section('content')
     <!--Breadcrumb-->
@@ -53,9 +9,9 @@
             <div class="page-header">
                 <h4 class="page-title">Classes list</h4>
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                    <li class="breadcrumb-item"><a href="javascript:void(0)">Pages</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Classes list</li>
+                    <li class="breadcrumb-item"><a href="javascript:void(0)">Accueil</a></li>
+
+                    <li class="breadcrumb-item active" aria-current="page">Formation</li>
                 </ol>
             </div>
         </div>
@@ -78,7 +34,7 @@
                                             <div class="d-md-flex">
                                                 <div class="item-card9-img">
                                                     <div class="item-card9-imgs">
-                                                        <a href="page-details.html"></a>
+                                                        <a href="{{route('front.formation_detail','informatique-genie-logiciel')}}"></a>
                                                         <img src="../../assets/images/media/11.jpg" alt="img" class="cover-image">
                                                     </div>
                                                     <div class="item-card9-icons">
@@ -86,13 +42,13 @@
                                                         <a href="javascript:void(0)" class="item-card9-icons1 bg-secondary"> <i class="fa fa fa-share-alt"></i></a>
                                                     </div>
                                                     <div class="item-overly-trans">
-                                                        <a href="page-details.html" class="bg-primary">Popular</a>
+                                                        <a href="{{route('front.formation_detail','informatique-genie-logiciel')}}" class="bg-primary">Popular</a>
                                                     </div>
                                                 </div>
                                                 <div class="card border-0 mb-0">
                                                     <div class="card-body ">
                                                         <div class="item-card9">
-                                                            <a href="page-details.html" class="text-default-dark"><h3 class="">Business Management Classes</h3></a>
+                                                            <a href="{{route('front.formation_detail','informatique-genie-logiciel')}}" class="text-default-dark"><h3 class="">Business Management Classes</h3></a>
                                                             <p class="mb-0 mt-1 lead">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium </p>
                                                             <div class="mt-2 mb-2">
                                                                 <ul class="icon-card-1">
@@ -129,7 +85,7 @@
                                             <div class="d-md-flex">
                                                 <div class="item-card9-img">
                                                     <div class="item-card9-imgs">
-                                                        <a href="page-details.html"></a>
+                                                        <a href="{{route('front.formation_detail','informatique-genie-logiciel')}}"></a>
                                                         <img src="../../assets/images/media/9.jpg" alt="img" class="cover-image">
                                                     </div>
                                                     <div class="item-card9-icons">
@@ -137,13 +93,13 @@
                                                         <a href="javascript:void(0)" class="item-card9-icons1 bg-secondary"> <i class="fa fa fa-share-alt"></i></a>
                                                     </div>
                                                     <div class="item-overly-trans">
-                                                        <a href="page-details.html" class="bg-blue">High Rated</a>
+                                                        <a href="{{route('front.formation_detail','informatique-genie-logiciel')}}" class="bg-blue">High Rated</a>
                                                     </div>
                                                 </div>
                                                 <div class="card mb-0 border-0">
                                                     <div class="card-body ">
                                                         <div class="item-card9">
-                                                            <a href="page-details.html" class="text-default-dark"><h3 class="">Networking Classes</h3></a>
+                                                            <a href="{{route('front.formation_detail','informatique-genie-logiciel')}}" class="text-default-dark"><h3 class="">Networking Classes</h3></a>
                                                             <p class="mb-0 leading-tight">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium </p>
                                                             <div class="mt-2 mb-2">
                                                                 <ul class="icon-card-1">
@@ -179,7 +135,7 @@
                                             <div class="d-md-flex">
                                                 <div class="item-card9-img">
                                                     <div class="item-card9-imgs">
-                                                        <a href="page-details.html"></a>
+                                                        <a href="{{route('front.formation_detail','informatique-genie-logiciel')}}"></a>
                                                         <img src="../../assets/images/media/3.jpg" alt="img" class="cover-image">
                                                     </div>
                                                     <div class="item-card9-icons">
@@ -187,13 +143,13 @@
                                                         <a href="javascript:void(0)" class="item-card9-icons1 bg-secondary"> <i class="fa fa fa-share-alt"></i></a>
                                                     </div>
                                                     <div class="item-overly-trans">
-                                                        <a href="page-details.html" class="bg-primary">Popular</a>
+                                                        <a href="{{route('front.formation_detail','informatique-genie-logiciel')}}" class="bg-primary">Popular</a>
                                                     </div>
                                                 </div>
                                                 <div class="card border-0 mb-0">
                                                     <div class="card-body ">
                                                         <div class="item-card9">
-                                                            <a href="page-details.html" class="text-default-dark"><h3 class="">Beautician Classes</h3></a>
+                                                            <a href="{{route('front.formation_detail','informatique-genie-logiciel')}}" class="text-default-dark"><h3 class="">Beautician Classes</h3></a>
                                                             <p class="mb-0 leading-tight">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium </p>
                                                             <div class="mt-2 mb-2">
                                                                 <ul class="icon-card-1">
@@ -233,7 +189,7 @@
                                                 <div class="card overflow-hidden">
                                                     <div class="item-card9-img">
                                                         <div class="item-card9-imgs">
-                                                            <a href="page-details.html"></a>
+                                                            <a href="{{route('front.formation_detail','informatique-genie-logiciel')}}"></a>
                                                             <img src="../../assets/images/media/11.jpg" alt="img" class="cover-image">
                                                         </div>
                                                         <div class="item-card9-icons">
@@ -241,13 +197,13 @@
                                                             <a href="javascript:void(0)" class="item-card9-icons1 bg-secondary"> <i class="fa fa fa-share-alt"></i></a>
                                                         </div>
                                                         <div class="item-overly-trans">
-                                                            <a href="page-details.html" class="bg-primary">Popular</a>
+                                                            <a href="{{route('front.formation_detail','informatique-genie-logiciel')}}" class="bg-primary">Popular</a>
                                                         </div>
                                                     </div>
                                                     <div class="card-body">
                                                         <div class="item-card9">
                                                             <span class="item-card-badge"><i class="fa fa-briefcase me-1"></i> Business</span>
-                                                            <a href="page-details.html" class="text-default-dark mt-2"><h3 class="mt-2 mb-2">Business Management</h3></a>
+                                                            <a href="{{route('front.formation_detail','informatique-genie-logiciel')}}" class="text-default-dark mt-2"><h3 class="mt-2 mb-2">Business Management</h3></a>
                                                             <p class="mb-0">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium </p>
                                                         </div>
                                                         <div class="mt-2 mb-2">
@@ -275,7 +231,7 @@
                                                     <div class="ribbon ribbon-top-left text-danger"><span class="bg-danger">Offer</span></div>
                                                     <div class="item-card9-img">
                                                         <div class="item-card9-imgs">
-                                                            <a href="page-details.html"></a>
+                                                            <a href="{{route('front.formation_detail','informatique-genie-logiciel')}}"></a>
                                                             <img src="../../assets/images/media/9.jpg" alt="img" class="cover-image">
                                                         </div>
                                                         <div class="item-card9-icons">
@@ -283,13 +239,13 @@
                                                             <a href="javascript:void(0)" class="item-card9-icons1 bg-secondary"> <i class="fa fa fa-share-alt"></i></a>
                                                         </div>
                                                         <div class="item-overly-trans">
-                                                            <a href="page-details.html" class="bg-primary">High Rated</a>
+                                                            <a href="{{route('front.formation_detail','informatique-genie-logiciel')}}" class="bg-primary">High Rated</a>
                                                         </div>
                                                     </div>
                                                     <div class="card-body">
                                                         <div class="item-card9">
                                                             <span class="item-card-badge"><i class="fa fa-cube me-1"></i> Networking</span>
-                                                            <a href="page-details.html" class="text-default-dark"><h3 class="mt-2 mb-2">Networking Classes</h3></a>
+                                                            <a href="{{route('front.formation_detail','informatique-genie-logiciel')}}" class="text-default-dark"><h3 class="mt-2 mb-2">Networking Classes</h3></a>
                                                             <p class="mb-0">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium </p>
                                                         </div>
                                                         <div class="mt-2 mb-2">
@@ -316,7 +272,7 @@
                                                 <div class="card overflow-hidden">
                                                     <div class="item-card9-img">
                                                         <div class="item-card9-imgs">
-                                                            <a href="page-details.html"></a>
+                                                            <a href="{{route('front.formation_detail','informatique-genie-logiciel')}}"></a>
                                                             <img src="../../assets/images/media/8.jpg" alt="img" class="cover-image">
                                                         </div>
                                                         <div class="item-card9-icons">
@@ -324,13 +280,13 @@
                                                             <a href="javascript:void(0)" class="item-card9-icons1 bg-secondary"> <i class="fa fa fa-share-alt"></i></a>
                                                         </div>
                                                         <div class="item-overly-trans">
-                                                            <a href="page-details.html" class="bg-blue">Popular</a>
+                                                            <a href="{{route('front.formation_detail','informatique-genie-logiciel')}}" class="bg-blue">Popular</a>
                                                         </div>
                                                     </div>
                                                     <div class="card-body">
                                                         <div class="item-card9">
                                                             <span class="item-card-badge"><i class="fa fa-paint-brush me-1"></i> Beautician</span>
-                                                            <a href="page-details.html" class="text-default-dark mt-2"><h3 class="mt-2 mb-2">Beautician Classes</h3></a>
+                                                            <a href="{{route('front.formation_detail','informatique-genie-logiciel')}}" class="text-default-dark mt-2"><h3 class="mt-2 mb-2">Beautician Classes</h3></a>
                                                             <p class="mb-0">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium </p>
                                                         </div>
                                                         <div class="mt-2 mb-2">
@@ -357,7 +313,7 @@
                                                 <div class="card overflow-hidden">
                                                     <div class="item-card9-img">
                                                         <div class="item-card9-imgs">
-                                                            <a href="page-details.html"></a>
+                                                            <a href="{{route('front.formation_detail','informatique-genie-logiciel')}}"></a>
                                                             <img src="../../assets/images/media/3.jpg" alt="img" class="cover-image">
                                                         </div>
                                                         <div class="item-card9-icons">
@@ -369,7 +325,7 @@
                                                         <div class="item-card2">
                                                             <div class="item-card2-desc">
                                                                 <span class="item-card-badge"><i class="fa fa-music me-1"></i> Music</span>
-                                                                <a href="page-details.html" class="text-default-dark mt-2"><h3 class="mt-2 mb-2">Guitar Classes</h3></a>
+                                                                <a href="{{route('front.formation_detail','informatique-genie-logiciel')}}" class="text-default-dark mt-2"><h3 class="mt-2 mb-2">Guitar Classes</h3></a>
                                                                 <p class="mb-0">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium </p>
                                                             </div>
                                                         </div>
@@ -397,7 +353,7 @@
                                                 <div class="card overflow-hidden">
                                                     <div class="item-card9-img">
                                                         <div class="item-card9-imgs">
-                                                            <a href="page-details.html"></a>
+                                                            <a href="{{route('front.formation_detail','informatique-genie-logiciel')}}"></a>
                                                             <img src="../../assets/images/media/16.jpg" alt="img" class="cover-image">
                                                         </div>
                                                         <div class="item-card9-icons">
@@ -405,14 +361,14 @@
                                                             <a href="javascript:void(0)" class="item-card9-icons1 bg-secondary"> <i class="fa fa fa-share-alt"></i></a>
                                                         </div>
                                                         <div class="item-overly-trans">
-                                                            <a href="page-details.html" class="bg-blue">Popular</a>
+                                                            <a href="{{route('front.formation_detail','informatique-genie-logiciel')}}" class="bg-blue">Popular</a>
                                                         </div>
                                                     </div>
                                                     <div class="card-body">
                                                         <div class="item-card2">
                                                             <div class="item-card2-desc">
                                                                 <span class="item-card-badge"><i class="fa fa-camera me-1"></i> PhotoShop</span>
-                                                                <a href="page-details.html" class="text-default-dark mt-2"><h3 class="mt-2 mb-2">PhotoShop Design</h3></a>
+                                                                <a href="{{route('front.formation_detail','informatique-genie-logiciel')}}" class="text-default-dark mt-2"><h3 class="mt-2 mb-2">PhotoShop Design</h3></a>
                                                                 <p class="mb-0">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium </p>
                                                             </div>
                                                         </div>
@@ -440,7 +396,7 @@
                                                 <div class="card overflow-hidden">
                                                     <div class="item-card9-img">
                                                         <div class="item-card9-imgs">
-                                                            <a href="page-details.html"></a>
+                                                            <a href="{{route('front.formation_detail','informatique-genie-logiciel')}}"></a>
                                                             <img src="../../assets/images/media/7.jpg" alt="img" class="cover-image">
                                                         </div>
                                                         <div class="item-card9-icons">
@@ -448,14 +404,14 @@
                                                             <a href="javascript:void(0)" class="item-card9-icons1 bg-secondary"> <i class="fa fa fa-share-alt"></i></a>
                                                         </div>
                                                         <div class="item-overly-trans">
-                                                            <a href="page-details.html" class="bg-primary">Best Sales</a>
+                                                            <a href="{{route('front.formation_detail','informatique-genie-logiciel')}}" class="bg-primary">Best Sales</a>
                                                         </div>
                                                     </div>
                                                     <div class="card-body">
                                                         <div class="item-card2">
                                                             <div class="item-card2-desc">
                                                                 <span class="item-card-badge"><i class="fa fa-flask me-1"></i> DataScience</span>
-                                                                <a href="page-details.html" class="text-default-dark mt-2"><h3 class="mt-2 mb-2">Data Science</h3></a>
+                                                                <a href="{{route('front.formation_detail','informatique-genie-logiciel')}}" class="text-default-dark mt-2"><h3 class="mt-2 mb-2">Data Science</h3></a>
                                                                 <p class="mb-0">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium </p>
                                                             </div>
                                                         </div>

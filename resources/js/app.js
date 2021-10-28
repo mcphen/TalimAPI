@@ -61,6 +61,7 @@ Vue.component('VueSlickCarousel',VueSlickCarousel)
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('form-login', require('./components/Auth/FormLogin').default);
+Vue.component('form-register', require('./components/Auth/FormRegister').default);
 Vue.component('admin-dashboard', require('./components/Admin/AdminDashboard').default);
 Vue.component('roles', require('./components/Admin/Parametre/Roles').default);
 Vue.component('filieres', require('./components/Admin/Parametre/Filieres').default);
@@ -72,7 +73,11 @@ Vue.component('admin-agence', require('./components/Admin/Agence/Agence').defaul
 Vue.component('university', require('./components/Agence/University').default);
 Vue.component('formations', require('./components/Agence/Formations').default);
 Vue.component('search', require('./components/Front/Search/Search').default);
+Vue.component('services', require('./components/Admin/Parametre/Services').default);
 Vue.component('front-formation', require('./components/Front/Formation/Formation').default);
+
+
+Vue.component('candidat-dashboard', require('./components/Candidat/Dashboard').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

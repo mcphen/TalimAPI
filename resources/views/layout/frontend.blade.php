@@ -16,7 +16,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="#" />
 
     <!-- Title -->
-    <title> Edomi - Online Education & Learning Courses HTML CSS Responsive Template</title>
+    <title> TALIM AFRIQUE</title>
 
     <!-- Bootstrap css -->
     <link href="{{url('/')}}/assets/plugins/bootstrap/css/bootstrap.css" rel="stylesheet" />
@@ -60,6 +60,52 @@
     <!--Topbar-->
     <div class="header-main" >
 
+        <div class="top-bar top-bar-light">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-xl-12 col-lg-12 col-sm-12 col-12">
+                        <div class="top-bar-end">
+                            <ul class="custom">
+                                @auth
+
+                                    <li class="dropdown">
+                                        <a href="javascript:void(0)" class="text-dark" data-bs-toggle="dropdown"><i class="fe fe-home me-1"></i><span> Tableau de bord<i class="fe fe-chevron-down  ms-1"></i></span></a>
+                                        <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                                            <a href="mydash.html" class="dropdown-item">
+                                                <i class="dropdown-icon icon icon-user"></i> My Profile
+                                            </a>
+                                            <a class="dropdown-item" href="javascript:void(0)">
+                                                <i class="dropdown-icon icon icon-speech"></i> Inbox
+                                            </a>
+                                            <a class="dropdown-item" href="javascript:void(0)">
+                                                <i class="dropdown-icon icon icon-bell"></i> Notifications
+                                            </a>
+                                            <a href="mydash.html" class="dropdown-item">
+                                                <i class="dropdown-icon  icon icon-settings"></i> Account Settings
+                                            </a>
+                                            <a class="dropdown-item" href="javascript:void(0)">
+                                                <i class="dropdown-icon icon icon-power"></i> Log out
+                                            </a>
+                                        </div>
+                                    </li>
+                                @endauth
+
+                                @guest
+
+                                    <li>
+                                        <a href="{{route('register')}}" class="text-dark"><i class="fe fe-user me-1"></i> <span>S'inscrire</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="{{route('login')}}" class="text-dark"><i class="fe fe-log-in me-1"></i> <span>Se Connecter</span></a>
+                                    </li>
+                                @endguest
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!--Section-->
         <div class="cover-image bg-background-1" data-bs-image-src="{{url('/')}}/assets/images/banners/banner1.jpg">
@@ -83,24 +129,46 @@
                 <div class="horizontal-main header-style1 bg-dark-transparent clearfix p-0 pt-4">
                     <div class="horizontal-mainwrapper container clearfix">
                         <div class="desktoplogo">
-                            <a href="{{route('home')}}"><img src="{{url('/')}}/assets/images/brand/logo1.png" alt="img">
+                            <a href="{{route('home')}}"><img src="{{url('/')}}/assets/images/brand/logo-white.png" style="height: 50px" alt="img" >
                                 <img src="../../assets/images/brand/logo.png" class="header-brand-img header-white" alt="logo">
                             </a>
                         </div>
-                        <div class="desktoplogo-1">
-                            <a href="{{route('home')}}"><img src="{{url('/')}}/assets/images/brand/logo.png" alt="img"></a>
+                        <div class="desktoplogo-1"  style="padding: 0px !important;">
+                            <a href="{{route('home')}}"><img src="{{url('/')}}/assets/images/brand/logo.png" alt="img" style="height: 50px"></a>
                         </div>
                         <nav class="horizontalMenu clearfix d-md-flex">
                             <ul class="horizontalMenu-list">
                                 <li aria-haspopup="true"><a href="{{route('home')}}">Accueil</a>
 
                                 </li>
-                                <li aria-haspopup="true"><a href="{{route('front.agences')}}">Nos agences </a></li>
-                                <li aria-haspopup="true"><a href="{{route('front.formations')}}">Nos formations</a></li>
-                                <li aria-haspopup="true"><a href="{{route('front.news')}}">Actualites</a></li>
+                                <li aria-haspopup="true"><a href="javascript:void(0)">Services <span class="fe fe-chevron-down"></span></a>
+                                    <ul class="sub-menu">
+                                        <li aria-haspopup="true"><a href="javascript:void(0)">Pré-inscription</a></li>
+                                        <li aria-haspopup="true"><a href="javascript:void(0)">Bourses</a></li>
+                                        <li aria-haspopup="true"><a href="javascript:void(0)">Stages</a></li>
+                                        <li aria-haspopup="true"><a href="javascript:void(0)">Assistance de visa étudiant</a></li>
+                                        <li aria-haspopup="true"><a href="javascript:void(0)">Assurance Voyage</a></li>
+                                        <li aria-haspopup="true"><a href="javascript:void(0)">Achat et Réservation de billet d’avion</a></li>
+                                        <li aria-haspopup="true"><a href="javascript:void(0)">Réservation de logement ou Hôtel</a></li>
+                                        <li aria-haspopup="true"><a href="javascript:void(0)">Service d’orientation</a></li>
+                                        <li aria-haspopup="true"><a href="javascript:void(0)">Cours particuliers</a></li>
+                                        <li aria-haspopup="true"><a href="javascript:void(0)">Traduction</a></li>
+                                    </ul>
+                                </li>
+                                <li aria-haspopup="true"><a href="{{route('front.formations')}}">Formations</a></li>
+                                <li aria-haspopup="true"><a href="{{route('front.bibliotheques')}}">Bibliothèques</a></li>
+                                <li aria-haspopup="true"><a href="{{route('front.talimeur')}}">Répertorier votre formation</a></li>
+                            <!--    <li aria-haspopup="true"><a href="{{route('front.news')}}">Actualites</a></li>-->
 
 
                                 <li aria-haspopup="true"><a href="{{route('front.contacts')}}"> Contact</a></li>
+                                @guest
+                                <li aria-haspopup="true" class="p-0 mt-1">
+                                    <span><a class="btn btn-primary" href="{{route('login')}}">Se connecter</a></span>
+                                </li>
+
+
+                                @endguest
 
                             </ul>
                         </nav>
@@ -127,24 +195,65 @@
     <div class="footer-main footer-main1">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-5">
                     <div class="row">
-                        <div class="col-lg-7 col-md-12">
+                        <div class="col-lg-5 col-md-12">
                             <img src="{{url('/')}}/assets/images/brand/logo-white.png" class="w-auto border-0" alt="img">
+
+
+                        </div>
+
+                        <div class="col-lg-7 col-md-12">
+                            <h6 class="font-weight-normal text-white">Infos</h6>
                             <ul class="list-unstyled mb-0 mt-4">
                                 <li>
-                                    <a href="javascript:void(0)">Second stret, New York, NY 10012, US</a>
+                                    <a href="javascript:void(0)">Avenue Mobutu
+                                        -N’DJAMENA TCHAD</a>
                                 </li>
                                 <li>
-                                    <a href="javascript:void(0)">info@example.com, info@edomi.com</a></li>
+                                    <a href="javascript:void(0)">BP: 5017</a></li>
                                 <li>
-                                    <a href="javascript:void(0)">+ 01 234 567 88</a>
+                                    <a href="javascript:void(0)">+23562 10 57 50 </a>
                                 </li>
                                 <li>
-                                    <a href="javascript:void(0)">+ 01 234 567 89</a>
+                                    <a href="javascript:void(0)">+23591 92 53 80</a>
+                                </li>
+                                <li>
+                                    Lundi-Vendredi <br>
+                                    08h- 12h – 13h30-16h30
                                 </li>
                             </ul>
+                        </div>
 
+
+
+                    </div>
+                </div>
+
+                <div class="col-lg-7">
+                    <h6 class="font-weight-normal text-white text-center">Services</h6>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-12">
+
+                            <ul class="list-unstyled mb-5 mb-lg-0">
+                                <li><a href="javascript:;"><i class="fe fe-chevron-right"></i> Pré-inscription</a></li>
+                                <li><a href="javascript:;"><i class="fe fe-chevron-right"></i> Bourses</a></li>
+                                <li><a href="javascript:;"><i class="fe fe-chevron-right"></i> Stages</a></li>
+                                <li><a href="javascript:;"><i class="fe fe-chevron-right"></i> Assistance de visa étudiant</a></li>
+                                <li><a href="javascript:;"><i class="fe fe-chevron-right"></i> Assurance Voyage</a></li>
+
+                            </ul>
+                        </div>
+                        <div class="col-lg-6 col-md-12">
+
+                            <ul class="list-unstyled mb-lg-0 mb-5">
+                                <li><a href="javascript:;"><i class="fe fe-chevron-right"></i> Réservation de logement ou Hôtel</a></li>
+                                <li><a href="javascript:;"><i class="fe fe-chevron-right"></i> Service d’orientation</a></li>
+                                <li><a href="javascript:;"><i class="fe fe-chevron-right"></i> Cours particuliers</a></li>
+                                <li><a href="javascript:;"><i class="fe fe-chevron-right"></i> Traduction</a></li>
+                                <li><a href="javascript:;"><i class="fe fe-chevron-right"></i> Devenir TALIM</a></li>
+
+                            </ul>
                         </div>
 
                     </div>

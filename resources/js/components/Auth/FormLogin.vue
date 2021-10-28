@@ -52,8 +52,10 @@ export default {
                     console.log(data);
                     if(data.data.role_id ==1){
                         window.location.href = '/admin/dashboard'
-                    }else{
+                    }else if(data.data.role_id ==2){
                         window.location.href = '/agence/dashboard'
+                    }else{
+                        window.location.href = '/dashboard'
                     }
 
                 }).catch(error => {

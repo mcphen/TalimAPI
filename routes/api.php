@@ -15,8 +15,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::post('login', [\App\Http\Controllers\API\AuthController::class, 'signin']);
+Route::post('candidature', [\App\Http\Controllers\API\CandidatController::class, 'candidature']);
 Route::post('register', [\App\Http\Controllers\API\AuthController::class, 'signup']);
-
+Route::resource('services', \App\Http\Controllers\API\ServiceController::class);
 Route::middleware('auth:sanctum')->group( function () {
     Route::resource('roles', \App\Http\Controllers\API\RoleController::class);
     Route::resource('agences', \App\Http\Controllers\API\AgenceController::class);
@@ -27,4 +28,6 @@ Route::middleware('auth:sanctum')->group( function () {
     Route::resource('niveaux', \App\Http\Controllers\API\NiveauController::class);
     Route::resource('universities', \App\Http\Controllers\API\UniversityController::class);
     Route::resource('formations', \App\Http\Controllers\API\FormationController::class);
+    Route::resource('cursus', \App\Http\Controllers\API\CursusController::class);
+
 });
